@@ -101,23 +101,24 @@ class Examples extends BaseController
 
     private function _exampleOutput($output = null)
     {
-        return view('example', (array)$output);
+        return view('crud', (array)$output);
     }
 
     public function jurusan()
     {
         $crud = new GroceryCrud();
         $crud->setTheme('datatables');
-        $crud->setTable('jurusan');
+        $crud->setTable('users');
         $output = $crud->render();
-        return $this->_exampleOutput($output);
+        // return $this->_exampleOutput($output);
+        return view('crud', (array)$output);
     }
 
     public function user()
     {
         $crud = new GroceryCrud();
         $crud->setTheme('datatables');
-        $crud->setTable('user');
+        $crud->setTable('users');
         $output = $crud->render();
         // return view('example', (array)$output);
         return $this->_exampleOutput($output);

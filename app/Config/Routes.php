@@ -9,12 +9,11 @@ use CodeIgniter\Router\RouteCollection;
 $routes->setAutoRoute(false);
 
 
-// $routes->get('/', 'Home::index');
+
+// $routes->get('/', 'Home::userv2');
 
 $routes->get('/crud', 'Crud::index')->setAutoRoute(true);
 
-// $routes->get('/register', 'Home::register');
+$routes->get('/admin', 'Home::user');
 
-// $routes->get('/grocery', 'Home::grocery')->setAutoRoute(true);
-
-$routes->get('/', 'Home::user');
+$routes->get('/', 'OutletController::index');

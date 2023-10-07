@@ -4,23 +4,28 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         return view('auth/login');
     }
 
-    public function register(): string
+    public function register()
     {
         return view('auth/register');
     }
 
-    public function user(): string
+    public function user()
     {
         return view('user/index');
     }
 
-    public function grocery(): string
-    {
-        return view('example');
-    }
+    // public function userv2()
+    // {
+    //     return view('index');
+    // }
+
+    // public function grocery()
+    // {
+    //     return view('crud');
+    // }
 }
